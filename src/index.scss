@@ -1,3 +1,5 @@
+/* CONFIG ------------------------------------------------------------------- */
+
 $color-base: #4d4d4d;
 $color-strong: #000000;
 $color-invert: #ffffff;
@@ -5,7 +7,9 @@ $color-bg-highlight: #666666;
 $spacing: 1rem;
 $spacing-small: 0.5rem;
 
-body, p, ul {
+/* GENERAL ------------------------------------------------------------------ */
+
+body, p, ul, h1, h2 {
   margin: 0;
   padding: 0;
 }
@@ -22,12 +26,11 @@ h1, h2 {
   color: $color-strong;
 }
 
-.footer {
-  background: $color-bg-highlight;
-  color: #b3b3b3;
-  text-align: justify;
-  padding: $spacing 0 $spacing 0;
+.container {
+  margin: 0 $spacing 0 $spacing;
 }
+
+/* LOGO --------------------------------------------------------------------- */
 
 .logo {
   color: #ffc2dd;
@@ -43,28 +46,47 @@ h1, h2 {
   display: block;
 }
 
-.container {
-  margin: 0 $spacing 0 $spacing;
-}
+/* NAVS --------------------------------------------------------------------- */
 
 .nav {
   list-style: none;
 }
 
-.nav--link {
+.nav__link {
   color: $color-invert;
   text-decoration: none;
 }
 
-.footer--nav {
+/* FOOTER ------------------------------------------------------------------- */
+
+.footer {
+  background: $color-bg-highlight;
+  color: #b3b3b3;
+  text-align: justify;
+  padding: $spacing 0 $spacing 0;
+}
+
+.footer__nav {
   columns: 2;
   text-align: center;
 }
 
-.footer--link {
+.footer__link {
   margin-bottom: $spacing-small;
 }
 
 .info {
   margin: $spacing-small 0 $spacing 0;
+}
+
+/* BOXES  ------------------------------------------------------------------- */
+
+.box {
+  padding: $spacing;
+  background: $color-invert;
+  margin-bottom: $spacing;
+}
+
+.box--dark {
+  background: #cccccc;
 }
