@@ -8,12 +8,34 @@ $color-separate: #cccccc;
 $spacing: 1rem;
 $spacing-small: 0.5rem;
 $spacing-large: 2rem;
+$base-size: 14px;
 
 /* GENERAL ------------------------------------------------------------------ */
 
 body, ul, h1, h2 {
   margin: 0;
   padding: 0;
+}
+
+body {
+  background: #e6e6e6;
+  font-family: "Trebuchet MS", sans-serif;
+  color: $color-base;
+  font-size: $base-size;
+}
+
+h1, h2 {
+  font-family: TimesNewRoman, "Times New Roman", Times, serif;
+  color: $color-strong;
+  padding-bottom: $spacing-small;
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
 }
 
 p {
@@ -24,17 +46,8 @@ p:last-child {
   margin: 0;
 }
 
-body {
-  background: #e6e6e6;
-  font-family: "Trebuchet MS", sans-serif;
-  color: $color-base;
-  font-size: 14px;
-}
-
-h1, h2 {
-  font-family: TimesNewRoman, "Times New Roman", Times, serif;
-  color: $color-strong;
-  padding-bottom: $spacing-small;
+p, a, ul, li {
+  font-size: $base-size;
 }
 
 a {
@@ -128,4 +141,9 @@ header nav, header ul { display: none}
 .linklist__link:last-child a {
   border: none;
   padding-bottom: 0;
+}
+
+.article-header {
+  border-bottom: $color-strong 2px solid;
+  margin-bottom: $spacing;
 }
