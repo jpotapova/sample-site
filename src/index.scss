@@ -3,10 +3,14 @@ $color-strong: #000000;
 $color-invert: #ffffff;
 $color-bg-highlight: #666666;
 $spacing: 1rem;
+$spacing-small: 0.5rem;
 
-body {
+body, p, ul {
   margin: 0;
   padding: 0;
+}
+
+body {
   background: #e6e6e6;
   font-family: "Trebuchet MS", sans-serif;
   color: $color-base;
@@ -41,4 +45,26 @@ h1, h2 {
 
 .container {
   margin: 0 $spacing 0 $spacing;
+}
+
+.nav {
+  list-style: none;
+}
+
+.nav--link {
+  color: $color-invert;
+  text-decoration: none;
+}
+
+.footer--nav {
+  columns: 2;
+  text-align: center;
+}
+
+.footer--link {
+  margin-bottom: $spacing-small;
+}
+
+.info {
+  margin: $spacing-small 0 $spacing 0;
 }
