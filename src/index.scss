@@ -7,6 +7,7 @@ $color-highlight: #666666;
 $color-separate: #cccccc;
 $spacing: 1rem;
 $spacing-small: 0.5rem;
+$spacing-large: 2rem;
 
 /* GENERAL ------------------------------------------------------------------ */
 
@@ -81,20 +82,31 @@ a {
   background: $color-separate;
 }
 
+/* HEADER ------------------------------------------------------------------- */
+
+/* temp */
+header nav, header ul { display: none}
+
+.header {
+  background: #d3135a;
+  padding: $spacing;
+  margin-bottom: $spacing-large;
+}
+
 /* OTHER -------------------------------------------------------------------- */
 
 .logo {
   color: #ffc2dd;
   text-decoration: none;
   font-weight: strong;
-  font-size: 4.3rem;
+  font-size: 3rem;
 }
 
 .logo--secondary {
   color: $color-invert;
   font-size: 2.2rem;
-  text-align: center;
   display: block;
+  text-align: center;
 }
 
 .linklist {
@@ -111,4 +123,8 @@ a {
 .linklist__link:last-child a {
   border: none;
   padding-bottom: 0;
+}
+
+.article p {
+  margin-bottom: $spacing;
 }
