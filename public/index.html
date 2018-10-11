@@ -84,8 +84,22 @@
         <article>
           <h2 class="article-header">Aenean ac diam nec neque fringilla</h2>
           <p>Integer eget mauris et urna pulvinar consectetur hendrerit eget mauris. Praesent a interdum justo. Aenean ac diam nec neque fringilla cursus. Donec iaculis tortor in nunc vehicula rutrum. Integer malesuada mollis ligula at varius.</p>
-          <form>
-            Form goes here
+          <form class="form">
+            <div class="form__row">
+              <label for="name">First name*:</label>
+              <input type="text" id="name" class="field" placeholder="Enter your name" />
+            </div>
+            <div class="form__row">
+              <label for="lastname">Last name*:</label>
+              <input type="text" id="lastname" class="field" placeholder="Enter your last name"  />
+            </div>
+            <div class="form__row">
+              <label for="message">Message*:</label>
+              <textarea id="message" class="field field--large"></textarea>
+            </div>
+            <div>
+              <button type="submit" class="button">Submit</button>
+            </div>
           </form>
         </article>
       </div>

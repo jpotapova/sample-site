@@ -5,12 +5,22 @@ $color-strong: #000000;
 $color-invert: #ffffff;
 $color-highlight: #666666;
 $color-separate: #cccccc;
+$color-brand: #d3135a;
+$color-border: #898989;
 $spacing: 1rem;
 $spacing-small: 0.5rem;
 $spacing-large: 2rem;
 $base-size: 14px;
+$font: "Trebuchet MS", sans-serif;
 
 /* GENERAL ------------------------------------------------------------------ */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
 body, ul, h1, h2 {
   margin: 0;
@@ -19,7 +29,7 @@ body, ul, h1, h2 {
 
 body {
   background: #e6e6e6;
-  font-family: "Trebuchet MS", sans-serif;
+  font-family: $font;
   color: $color-base;
   font-size: $base-size;
 }
@@ -40,13 +50,14 @@ h2 {
 
 p {
   margin: 0 0 $spacing 0;
+  line-height: 1.3rem;
 }
 
 p:last-child {
   margin: 0;
 }
 
-p, a, ul, li {
+p, a, ul, li, button, input, textarea, label {
   font-size: $base-size;
 }
 
@@ -106,11 +117,47 @@ a {
 header nav, header ul { display: none}
 
 .header {
-  background: #d3135a;
+  background: $color-brand;
   padding: $spacing;
   margin-bottom: $spacing-large;
 }
 
+/* FORM --------------------------------------------------------------------- */
+.form {
+  margin-bottom: $spacing;
+  border: 1px solid $color-border;
+  padding: $spacing;
+}
+
+.form__row {
+  margin-bottom: $spacing;
+}
+
+.field {
+  display: block;
+  width: 100%;
+  border: 1px solid $color-border;
+  padding: $spacing-small;
+  margin-top: $spacing-small;
+}
+
+.field--large {
+  height: 7rem;
+}
+
+.button {
+  color: $color-invert;
+  background: $color-brand;
+  border: none;
+  text-transform: uppercase;
+  font-family: $font;
+  letter-spacing: 2px;
+  padding: $spacing-small $spacing-large;
+}
+
+label {
+  color: $color-strong;
+}
 /* OTHER -------------------------------------------------------------------- */
 
 .logo {
@@ -135,7 +182,7 @@ header nav, header ul { display: none}
   display: block;
   text-decoration: none;
   padding: $spacing-small 0 $spacing-small 0;
-  border-bottom: $color-separate 1px solid;
+  border-bottom:  1px solid $color-separate;
 }
 
 .linklist__link:last-child a {
@@ -144,6 +191,6 @@ header nav, header ul { display: none}
 }
 
 .article-header {
-  border-bottom: $color-strong 2px solid;
+  border-bottom:  2px solid $color-strong;
   margin-bottom: $spacing;
 }
