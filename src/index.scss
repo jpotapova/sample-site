@@ -11,9 +11,17 @@ $spacing-large: 2rem;
 
 /* GENERAL ------------------------------------------------------------------ */
 
-body, p, ul, h1, h2 {
+body, ul, h1, h2 {
   margin: 0;
   padding: 0;
+}
+
+p {
+  margin: 0 0 $spacing 0;
+}
+
+p:last-child {
+  margin: 0;
 }
 
 body {
@@ -60,14 +68,11 @@ a {
 .footer__nav {
   columns: 2;
   text-align: center;
+  margin-bottom: $spacing-small;
 }
 
 .footer__link  {
   margin-bottom: $spacing-small;
-}
-
-.info {
-  margin: $spacing-small 0 $spacing 0;
 }
 
 /* BOXES  ------------------------------------------------------------------- */
@@ -123,8 +128,4 @@ header nav, header ul { display: none}
 .linklist__link:last-child a {
   border: none;
   padding-bottom: 0;
-}
-
-.article p {
-  margin-bottom: $spacing;
 }
