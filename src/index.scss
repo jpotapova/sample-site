@@ -3,7 +3,8 @@
 $color-base: #4d4d4d;
 $color-strong: #000000;
 $color-invert: #ffffff;
-$color-bg-highlight: #666666;
+$color-highlight: #666666;
+$color-separate: #cccccc;
 $spacing: 1rem;
 $spacing-small: 0.5rem;
 
@@ -24,26 +25,15 @@ body {
 h1, h2 {
   font-family: TimesNewRoman, "Times New Roman", Times, serif;
   color: $color-strong;
+  padding-bottom: $spacing-small;
+}
+
+a {
+  color: #0071bc;
 }
 
 .container {
   margin: 0 $spacing 0 $spacing;
-}
-
-/* LOGO --------------------------------------------------------------------- */
-
-.logo {
-  color: #ffc2dd;
-  text-decoration: none;
-  font-weight: strong;
-  font-size: 4.3rem;
-}
-
-.logo--secondary {
-  color: $color-invert;
-  font-size: 2.2rem;
-  text-align: center;
-  display: block;
 }
 
 /* NAVS --------------------------------------------------------------------- */
@@ -52,7 +42,7 @@ h1, h2 {
   list-style: none;
 }
 
-.nav__link {
+.nav__link a {
   color: $color-invert;
   text-decoration: none;
 }
@@ -60,7 +50,7 @@ h1, h2 {
 /* FOOTER ------------------------------------------------------------------- */
 
 .footer {
-  background: $color-bg-highlight;
+  background: $color-highlight;
   color: #b3b3b3;
   text-align: justify;
   padding: $spacing 0 $spacing 0;
@@ -71,7 +61,7 @@ h1, h2 {
   text-align: center;
 }
 
-.footer__link {
+.footer__link  {
   margin-bottom: $spacing-small;
 }
 
@@ -88,5 +78,37 @@ h1, h2 {
 }
 
 .box--dark {
-  background: #cccccc;
+  background: $color-separate;
+}
+
+/* OTHER -------------------------------------------------------------------- */
+
+.logo {
+  color: #ffc2dd;
+  text-decoration: none;
+  font-weight: strong;
+  font-size: 4.3rem;
+}
+
+.logo--secondary {
+  color: $color-invert;
+  font-size: 2.2rem;
+  text-align: center;
+  display: block;
+}
+
+.linklist {
+  list-style: none;
+}
+
+.linklist__link a {
+  display: block;
+  text-decoration: none;
+  padding: $spacing-small 0 $spacing-small 0;
+  border-bottom: $color-separate 1px solid;
+}
+
+.linklist__link:last-child a {
+  border: none;
+  padding-bottom: 0;
 }
