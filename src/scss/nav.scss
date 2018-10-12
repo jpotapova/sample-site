@@ -38,4 +38,24 @@
     color: white;
   }
 
+  .nav--footerlinks & {
+    padding-bottom: $spacing-small;
+  }
+
+}
+
+.nav--footerlinks {
+  columns: 2;
+  text-align: center;
+  margin-bottom: $spacing;
+
+  .nav__item {
+    margin-bottom: $spacing-small;
+    border-bottom: none;
+
+    a {
+      color: $color-invert;
+    }
+
+  }
 }

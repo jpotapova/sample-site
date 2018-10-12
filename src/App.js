@@ -8,7 +8,7 @@ class App extends Component {
           <header className="header">
             <div className="container header__container">
               <a href="#" className="logo">The Site</a>
-              <button className="button button--nav">&#9776;</button>
+              <button type="button" className="button button--nav">&#9776;</button>
               <div className="navbox">
                 <ul className="nav nav--secondary">
                   <li className="nav__item"><a href="#">menu link</a></li>
@@ -52,7 +52,7 @@ class App extends Component {
                 </nav>
               </div>
               <div className="overlay">
-                <button className="button button--close">&times;</button>
+                <button type="button" className="button button--close">&times;</button>
               </div>
             </div>
           </header>
@@ -107,13 +107,13 @@ class App extends Component {
           </main>
           <footer className="footer">
             <div className="container">
-              <ul className="nav footer__nav">
-                <li className="footer__link nav__link"><a href="#">menu link</a></li>
-                <li className="footer__link nav__link"><a href="#">menu link</a></li>
-                <li className="footer__link nav__link"><a href="#">menu link</a></li>
-                <li className="footer__link nav__link"><a href="#">menu link</a></li>
-                <li className="footer__link nav__link"><a href="#">menu link</a></li>
-                <li className="footer__link nav__link"><a href="#">menu link</a></li>
+              <ul className="nav nav--footerlinks">
+                <li className="nav__item"><a href="#">menu link</a></li>
+                <li className="nav__item"><a href="#">menu link</a></li>
+                <li className="nav__item"><a href="#">menu link</a></li>
+                <li className="nav__item"><a href="#">menu link</a></li>
+                <li className="nav__item"><a href="#">menu link</a></li>
+                <li className="nav__item"><a href="#">menu link</a></li>
               </ul>
               <p>
                 Nullam mattis luctus dolor, sed gravida tellus volutpat vel. Maecenas mollis augue sed tortor molestie ornare. Proin dapibus dictum eros ut adipiscing. Nullam ultrices dolor ut tristique sollicitudin. Integer scelerisque urna est, sit amet aliquet sapien accumsan quis. Nullam luctus semper vulputate. Nulla egestas urna nec tellus ultrices elementum. Proin dapibus dictum eros ut adipiscing. Nullam ultrices dolor ut tristique sollicitudin. Integer scelerisque
@@ -122,7 +122,7 @@ class App extends Component {
                 The Site
               </a>
             </div>
-            <button className="button button--totop">Back to top</button>
+            <button type="button" className="button button--totop">Back to top</button>
           </footer>
         </div>
       </div>
