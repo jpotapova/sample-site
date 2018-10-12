@@ -86,17 +86,29 @@ a {
   background: $color-highlight;
   color: #b3b3b3;
   text-align: justify;
-  padding: $spacing 0 $spacing 0;
+  padding: $spacing-large 0 $spacing-large 0;
 }
 
 .footer__nav {
   columns: 2;
   text-align: center;
-  margin-bottom: $spacing-small;
+  margin-bottom: $spacing;
 }
 
 .footer__link  {
   margin-bottom: $spacing-small;
+}
+
+.back-to-top {
+  background: $color-separate;
+  width: 100%;
+  border: none;
+  height: $spacing-large;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  opacity: 0.7;
+  text-transform: uppercase;
 }
 
 /* BOXES  ------------------------------------------------------------------- */
@@ -118,7 +130,7 @@ header nav, header ul { display: none}
 
 .header {
   background: $color-brand;
-  padding: $spacing;
+  padding: $spacing-large $spacing;
   margin-bottom: $spacing-large;
 }
 
@@ -160,6 +172,8 @@ label {
 }
 /* OTHER -------------------------------------------------------------------- */
 
+/* --- LOGO --- */
+
 .logo {
   color: #ffc2dd;
   text-decoration: none;
@@ -173,6 +187,8 @@ label {
   display: block;
   text-align: center;
 }
+
+/* --- LINKLIST --- */
 
 .linklist {
   list-style: none;
@@ -189,6 +205,8 @@ label {
   border: none;
   padding-bottom: 0;
 }
+
+/* --- OTHER --- */
 
 .article-header {
   border-bottom:  2px solid $color-strong;
