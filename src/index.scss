@@ -86,7 +86,7 @@ a {
   background: $color-highlight;
   color: #b3b3b3;
   text-align: justify;
-  padding: $spacing-large 0 $spacing-large 0;
+  padding: $spacing-large 0 $spacing-large+$spacing 0;
 }
 
 .footer__nav {
@@ -97,18 +97,6 @@ a {
 
 .footer__link  {
   margin-bottom: $spacing-small;
-}
-
-.back-to-top {
-  background: $color-separate;
-  width: 100%;
-  border: none;
-  height: $spacing-large;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  opacity: 0.7;
-  text-transform: uppercase;
 }
 
 /* BOXES  ------------------------------------------------------------------- */
@@ -130,8 +118,13 @@ header nav, header ul { display: none}
 
 .header {
   background: $color-brand;
-  padding: $spacing-large $spacing;
+  padding: $spacing-large 0;
   margin-bottom: $spacing-large;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
 }
 
 /* FORM --------------------------------------------------------------------- */
@@ -157,16 +150,6 @@ header nav, header ul { display: none}
   height: 7rem;
 }
 
-.button {
-  color: $color-invert;
-  background: $color-brand;
-  border: none;
-  text-transform: uppercase;
-  font-family: $font;
-  letter-spacing: 2px;
-  padding: $spacing-small $spacing-large;
-}
-
 label {
   color: $color-strong;
 }
@@ -177,7 +160,7 @@ label {
 .logo {
   color: #ffc2dd;
   text-decoration: none;
-  font-weight: strong;
+  font-weight: bold;
   font-size: 3rem;
 }
 
@@ -204,6 +187,38 @@ label {
 .linklist__link:last-child a {
   border: none;
   padding-bottom: 0;
+}
+
+/* --- BUTTONS --- */
+
+.button {
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  font-family: $font;
+  padding: 0;
+}
+
+.button--cta {
+  color: $color-invert;
+  background: $color-brand;
+  letter-spacing: 2px;
+  padding: $spacing-small $spacing-large;
+}
+
+.button--totop {
+  background: $color-separate;
+  width: 100%;
+  height: $spacing-large;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  opacity: 0.7;
+}
+
+.button--nav {
+  color: $color-invert;
+  font-size: 2rem;
 }
 
 /* --- OTHER --- */
