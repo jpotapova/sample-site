@@ -1,8 +1,53 @@
+.navbox {
+  position: absolute;
+  background: $color-bg;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: scroll;
+  // display: none;
+}
+
 .nav {
   list-style: none;
 }
 
-.nav__link a {
-  color: $color-invert;
-  text-decoration: none;
+.nav__item {
+
+  a {
+    text-decoration: none;
+    display: block;
+  }
+
+  border-bottom:  1px solid $color-separate;
+  &:last-child {
+    border-bottom: none;
+  }
+
+  .nav--list & {
+    padding: $spacing-small 0 $spacing-small 0;
+  }
+
+  .nav--secondary & a {
+    padding: $spacing;
+    color: $color-base;
+  }
+
+  .nav--main &  {
+    border-color: $color-border;
+
+    a {
+      padding: $spacing;
+      color: $color-base;
+      background: $color-separate;
+    }
+  }
+
+  .nav--main &--top>a {
+    background: $color-highlight;
+    color: white;
+  }
+
 }

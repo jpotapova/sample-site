@@ -54,24 +54,6 @@ label {
   text-align: center;
 }
 
-/* LINKLIST ----------------------------------------------------------------- */
-
-.linklist {
-  list-style: none;
-}
-
-.linklist__link a {
-  display: block;
-  text-decoration: none;
-  padding: $spacing-small 0 $spacing-small 0;
-  border-bottom:  1px solid $color-separate;
-}
-
-.linklist__link:last-child a {
-  border: none;
-  padding-bottom: 0;
-}
-
 /* BUTTONS ------------------------------------------------------------------ */
 
 .button {
