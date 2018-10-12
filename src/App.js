@@ -5,52 +5,55 @@ class App extends Component {
     return (
       <div className="app">
         <div className="content">
-          <div className="navbox">
-            <ul className="nav nav--secondary">
-              <li className="nav__item"><a href="#">menu link</a></li>
-              <li className="nav__item"><a href="#">menu link</a></li>
-              <li className="nav__item"><a href="#">menu link</a></li>
-            </ul>
-            <nav>
-              <ul className="nav nav--main">
-                <li className="nav__item nav__item--top">
-                  <a href="#">menu link</a>
-                  <ul className="nav">
-                    <li className="nav__item"><a href="#">Integer eget mauris</a></li>
-                    <li className="nav__item"><a href="#">Pulvinar consectetur</a></li>
-                    <li className="nav__item"><a href="#">Oget mauris praesent</a></li>
-                    <li className="nav__item"><a href="#">Interdum justo</a></li>
-                    <li className="nav__item"><a href="#">Nec neque fringilla </a></li>
-                  </ul>
-                </li>
-                <li className="nav__item nav__item--top">
-                  <a href="#">menu link</a>
-                  <ul className="nav">
-                    <li className="nav__item"><a href="#">Integer eget mauris</a></li>
-                    <li className="nav__item"><a href="#">Pulvinar consectetur</a></li>
-                    <li className="nav__item"><a href="#">Oget mauris praesent</a></li>
-                    <li className="nav__item"><a href="#">Interdum justo</a></li>
-                    <li className="nav__item"><a href="#">Nec neque fringilla </a></li>
-                  </ul>
-                </li>
-                <li className="nav__item nav__item--top"><a href="#">menu link</a></li>
-                <li className="nav__item nav__item--top">
-                  <a href="#">menu link</a>
-                  <ul className="nav">
-                    <li className="nav__item"><a href="#">Integer eget mauris</a></li>
-                    <li className="nav__item"><a href="#">Pulvinar consectetur</a></li>
-                    <li className="nav__item"><a href="#">Oget mauris praesent</a></li>
-                    <li className="nav__item"><a href="#">Interdum justo</a></li>
-                    <li className="nav__item"><a href="#">Nec neque fringilla </a></li>
-                  </ul>
-                </li>
-              </ul>
-            </nav>
-          </div>
           <header className="header">
             <div className="container header__container">
               <a href="#" className="logo">The Site</a>
               <button className="button button--nav">&#9776;</button>
+              <div className="navbox">
+                <ul className="nav nav--secondary">
+                  <li className="nav__item"><a href="#">menu link</a></li>
+                  <li className="nav__item"><a href="#">menu link</a></li>
+                  <li className="nav__item"><a href="#">menu link</a></li>
+                </ul>
+                <nav>
+                  <ul className="nav nav--main">
+                    <li className="nav__item nav__item--top">
+                      <a href="#">menu link</a>
+                      <ul className="nav">
+                        <li className="nav__item"><a href="#">Integer eget mauris</a></li>
+                        <li className="nav__item"><a href="#">Pulvinar consectetur</a></li>
+                        <li className="nav__item"><a href="#">Oget mauris praesent</a></li>
+                        <li className="nav__item"><a href="#">Interdum justo</a></li>
+                        <li className="nav__item"><a href="#">Nec neque fringilla </a></li>
+                      </ul>
+                    </li>
+                    <li className="nav__item nav__item--top">
+                      <a href="#">menu link</a>
+                      <ul className="nav">
+                        <li className="nav__item"><a href="#">Integer eget mauris</a></li>
+                        <li className="nav__item"><a href="#">Pulvinar consectetur</a></li>
+                        <li className="nav__item"><a href="#">Oget mauris praesent</a></li>
+                        <li className="nav__item"><a href="#">Interdum justo</a></li>
+                        <li className="nav__item"><a href="#">Nec neque fringilla </a></li>
+                      </ul>
+                    </li>
+                    <li className="nav__item nav__item--top"><a href="#">menu link</a></li>
+                    <li className="nav__item nav__item--top">
+                      <a href="#">menu link</a>
+                      <ul className="nav">
+                        <li className="nav__item"><a href="#">Integer eget mauris</a></li>
+                        <li className="nav__item"><a href="#">Pulvinar consectetur</a></li>
+                        <li className="nav__item"><a href="#">Oget mauris praesent</a></li>
+                        <li className="nav__item"><a href="#">Interdum justo</a></li>
+                        <li className="nav__item"><a href="#">Nec neque fringilla </a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <div className="overlay">
+                <button className="button button--close">&times;</button>
+              </div>
             </div>
           </header>
           <main>
