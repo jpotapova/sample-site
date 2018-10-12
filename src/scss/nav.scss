@@ -2,12 +2,21 @@
   position: absolute;
   background: $color-bg;
   top: 0;
-  left: 0;
-  width: 100%;
+  left: -$mobile-nav;
+  width: $mobile-nav;
   height: 100%;
   z-index: 1;
   overflow: scroll;
-  // display: none;
+}
+
+
+.content {
+  transform: translate3d(0);
+  transition: .3s ease all;
+
+  .viewnav & {
+    transform: translate3d($mobile-nav, 0, 0);
+  }
 }
 
 .nav {
