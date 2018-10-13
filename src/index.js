@@ -1,2 +1,1 @@
-alert('smth else');
-console.log('test');
+import './scss/index.scss';
