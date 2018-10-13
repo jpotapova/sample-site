@@ -165,6 +165,10 @@ label {
   text-transform: uppercase;
   font-family: $font;
   padding: 0;
+  display: block;
+  text-decoration: none;
+  color: $color-strong;
+  text-align: center;
 }
 
 .button--cta {
@@ -178,6 +182,7 @@ label {
   background: $color-separate;
   width: 100%;
   height: $spacing-large;
+  padding: $spacing-small;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -237,4 +242,8 @@ label {
     }
   }
 
+}
+
+.hide {
+  display: none;
 }
