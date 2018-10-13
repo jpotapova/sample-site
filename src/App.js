@@ -6,7 +6,7 @@ class App extends Component {
       <div className="app">
         <div className="content">
           <header className="header">
-            <div className="container header__container">
+            <div className="container container--flex">
               <a href="#" className="logo">The Site</a>
               <button type="button" className="button button--nav">&#9776;</button>
               <div className="navbox">
@@ -57,34 +57,31 @@ class App extends Component {
             </div>
           </header>
           <main>
-            <div className="container">
-              <article className="box">
-                <h1>Aenean ac diam nec neque fringilla</h1>
-                <p>Integer eget mauris et urna pulvinar consectetur hendrerit eget mauris. Praesent a interdum justo. Aenean ac diam nec neque fringilla cursus. Donec iaculis tortor in nunc vehicula rutrum. Integer malesuada mollis ligula at varius.</p>
-                <p>Integer eget mauris et urna pulvinar consectetur hendrerit eget mauris. Praesent a interdum justo. Aenean ac diam nec neque fringilla cursus. Donec iaculis tortor in nunc vehicula rutrum. Integer malesuada mollis ligula at varius.</p>
-                <p>Integer eget mauris et urna pulvinar consectetur hendrerit eget mauris. Praesent a interdum justo. Aenean ac diam nec neque fringilla cursus. Donec iaculis tortor in nunc vehicula rutrum. Integer malesuada mollis ligula at varius.</p>
-                <p>Integer eget mauris et urna pulvinar consectetur hendrerit eget mauris. Praesent a interdum justo. Aenean ac diam nec neque fringilla cursus. Donec iaculis tortor in nunc vehicula rutrum. Integer malesuada mollis ligula at varius.</p>
-                <p>Integer eget mauris et urna pulvinar consectetur hendrerit eget mauris. Praesent a interdum justo. Aenean ac diam nec neque fringilla cursus. Donec iaculis tortor in nunc vehicula rutrum. Integer malesuada mollis ligula at varius.</p>
-              </article>
-              <div className="related-content">
-                <div className="box">
-                  <p>Integer eget mauris et urna pulvinar consectetur hendrerit eget mauris. Praesent a interdum justo. Aenean ac diam nec neque fringilla cursus. Donec iaculis tortor in nunc vehicula rutrum. Integer malesuada mollis ligula at varius. Dorce pila meracone.</p>
+            <div className="container container--main">
+              <div className="main">
+                <article className="box">
+                  <h1>Aenean ac diam nec neque fringilla</h1>
+                  <p>Integer eget mauris et urna pulvinar consectetur hendrerit eget mauris. Praesent a interdum justo. Aenean ac diam nec neque fringilla cursus. Donec iaculis tortor in nunc vehicula rutrum. Integer malesuada mollis ligula at varius.</p>
+                  <p>Integer eget mauris et urna pulvinar consectetur hendrerit eget mauris. Praesent a interdum justo. Aenean ac diam nec neque fringilla cursus. Donec iaculis tortor in nunc vehicula rutrum. Integer malesuada mollis ligula at varius.</p>
+                  <p>Integer eget mauris et urna pulvinar consectetur hendrerit eget mauris. Praesent a interdum justo. Aenean ac diam nec neque fringilla cursus. Donec iaculis tortor in nunc vehicula rutrum. Integer malesuada mollis ligula at varius.</p>
+                  <p>Integer eget mauris et urna pulvinar consectetur hendrerit eget mauris. Praesent a interdum justo. Aenean ac diam nec neque fringilla cursus. Donec iaculis tortor in nunc vehicula rutrum. Integer malesuada mollis ligula at varius.</p>
+                  <p>Integer eget mauris et urna pulvinar consectetur hendrerit eget mauris. Praesent a interdum justo. Aenean ac diam nec neque fringilla cursus. Donec iaculis tortor in nunc vehicula rutrum. Integer malesuada mollis ligula at varius.</p>
+                </article>
+                <div className="related-content">
+                  <div className="box">
+                    <p>Integer eget mauris et urna pulvinar consectetur hendrerit eget mauris. Praesent a interdum justo. Aenean ac diam nec neque fringilla cursus. Donec iaculis tortor in nunc vehicula rutrum. Integer malesuada mollis ligula at varius. Dorce pila meracone.</p>
+                  </div>
+                  <aside className="box">
+                    <h2>Aenean ac diam nec neque</h2>
+                    <ul className="nav nav--list">
+                      <li className="nav__item"><a href="#">Integer eget mauris et urna</a></li>
+                      <li className="nav__item"><a href="#">Pulvinar consectetur hendrerit</a></li>
+                      <li className="nav__item"><a href="#">Oget mauris praesent</a></li>
+                    </ul>
+                  </aside>
                 </div>
-                <aside className="box">
-                  <h2>Aenean ac diam nec neque</h2>
-                  <ul className="nav nav--list">
-                    <li className="nav__item"><a href="#">Integer eget mauris et urna</a></li>
-                    <li className="nav__item"><a href="#">Pulvinar consectetur hendrerit</a></li>
-                    <li className="nav__item"><a href="#">Oget mauris praesent</a></li>
-                  </ul>
-                </aside>
               </div>
-              <div className="box box--dark">
-                <p>Integer eget mauris et urna pulvinar consectetur hendrerit eget mauris. Praesent a interdum justo. Aenean ac diam nec neque fringilla cursus. Donec iaculis tortor in nunc vehicula rutrum. Integer malesuada mollis ligula at varius.</p>
-                <p>Integer eget mauris et urna pulvinar consectetur hendrerit eget mauris. Praesent a interdum justo. Aenean ac diam nec neque fringilla cursus. Donec iaculis tortor in nunc vehicula rutrum. Integer malesuada mollis ligula at varius.</p>
-                <p>Integer eget mauris et urna pulvinar consectetur hendrerit eget mauris. Praesent a interdum justo. Aenean ac diam nec neque fringilla cursus. Donec iaculis tortor in nunc vehicula rutrum. Integer malesuada mollis ligula at varius.</p>
-              </div>
-              <article>
+              <article className="sidebar">
                 <h2 className="article-header">Aenean ac diam nec neque fringilla</h2>
                 <p>Integer eget mauris et urna pulvinar consectetur hendrerit eget mauris. Praesent a interdum justo. Aenean ac diam nec neque fringilla cursus. Donec iaculis tortor in nunc vehicula rutrum. Integer malesuada mollis ligula at varius.</p>
                 <form className="form">
@@ -105,6 +102,13 @@ class App extends Component {
                   </div>
                 </form>
               </article>
+            </div>
+            <div className="container">
+              <div className="box box--dark">
+                <p>Integer eget mauris et urna pulvinar consectetur hendrerit eget mauris. Praesent a interdum justo. Aenean ac diam nec neque fringilla cursus. Donec iaculis tortor in nunc vehicula rutrum. Integer malesuada mollis ligula at varius.</p>
+                <p>Integer eget mauris et urna pulvinar consectetur hendrerit eget mauris. Praesent a interdum justo. Aenean ac diam nec neque fringilla cursus. Donec iaculis tortor in nunc vehicula rutrum. Integer malesuada mollis ligula at varius.</p>
+                <p>Integer eget mauris et urna pulvinar consectetur hendrerit eget mauris. Praesent a interdum justo. Aenean ac diam nec neque fringilla cursus. Donec iaculis tortor in nunc vehicula rutrum. Integer malesuada mollis ligula at varius.</p>
+              </div>
             </div>
           </main>
           <footer className="footer">

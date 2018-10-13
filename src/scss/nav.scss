@@ -132,3 +132,9 @@
     }
   }
 }
+
+@media (min-width: $desktop) {
+  .nav-box {
+    position: static;
+  }
+}
