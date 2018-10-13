@@ -117,12 +117,14 @@ class App extends Component {
                 <li className="nav__item"><a href="#">menu link</a></li>
                 <li className="nav__item"><a href="#">menu link</a></li>
               </ul>
-              <p>
-                Nullam mattis luctus dolor, sed gravida tellus volutpat vel. Maecenas mollis augue sed tortor molestie ornare. Proin dapibus dictum eros ut adipiscing. Nullam ultrices dolor ut tristique sollicitudin. Integer scelerisque urna est, sit amet aliquet sapien accumsan quis. Nullam luctus semper vulputate. Nulla egestas urna nec tellus ultrices elementum. Proin dapibus dictum eros ut adipiscing. Nullam ultrices dolor ut tristique sollicitudin. Integer scelerisque
-              </p>
-              <a href="#" className="logo logo--secondary">
-                The Site
-              </a>
+              <div className="footer__info">
+                <p>
+                  Nullam mattis luctus dolor, sed gravida tellus volutpat vel. Maecenas mollis augue sed tortor molestie ornare. Proin dapibus dictum eros ut adipiscing. Nullam ultrices dolor ut tristique sollicitudin. Integer scelerisque urna est, sit amet aliquet sapien accumsan quis. Nullam luctus semper vulputate. Nulla egestas urna nec tellus ultrices elementum. Proin dapibus dictum eros ut adipiscing. Nullam ultrices dolor ut tristique sollicitudin. Integer scelerisque
+                </p>
+                <a href="#" className="logo logo--secondary">
+                  The Site
+                </a>
+              </div>
             </div>
             <button type="button" className="button button--totop">Back to top</button>
           </footer>

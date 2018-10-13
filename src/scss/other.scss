@@ -1,3 +1,43 @@
+/* FOOTER ------------------------------------------------------------------- */
+
+.footer {
+  background: $color-highlight;
+  color: #b3b3b3;
+  text-align: justify;
+  padding: $spacing-large 0 $spacing-large+$spacing 0;
+}
+
+@media (min-width: $tablet) {
+  .footer__info {
+    display: flex;
+    align-items: flex-end;
+
+    .logo {
+      white-space: nowrap;
+      text-align: right;
+      margin-left: $spacing-large;
+    }
+
+    p {
+      text-align: left;
+      margin-bottom: 0;
+    }
+  }
+}
+
+/* HEADER ------------------------------------------------------------------- */
+
+.header {
+  background: $color-brand;
+  padding: $spacing-large 0;
+  margin-bottom: $spacing-large;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+}
+
 /* BOXES  ------------------------------------------------------------------- */
 
 .box {
