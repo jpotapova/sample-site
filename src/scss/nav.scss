@@ -2,7 +2,7 @@
   list-style: none;
 }
 
-/* MAIN NAV (mobile) -------------------------------------------------------- */
+/* MAIN NAV ----------------------------------------------------------------- */
 
 .content {
   transform: translate3d(0);
@@ -20,6 +20,7 @@
   overflow: scroll;
 }
 
+// FIXME
 .overlay {
   width: 100%;
   height: 100%;
@@ -28,6 +29,10 @@
   position: absolute;
   top: 0;
   left: 0;
+
+  @media (min-width: $desktop) {
+    display: none;
+  }
 }
 
 .viewnav {
@@ -47,6 +52,22 @@
     background:rgba(0, 0, 0, 0.5);
   }
 }
+
+@media (min-width: $desktop) {
+  .navbox {
+    position: static;
+    background: transparent;
+    height: auto;
+    width: auto;
+    overflow: visible;
+  }
+
+  .nav--secondary {
+    display: flex;
+  }
+}
+
+/* NAV ITEMS ---------------------------------------------------------------- */
 
 .nav__item {
 
@@ -134,7 +155,16 @@
 }
 
 @media (min-width: $desktop) {
-  .nav-box {
-    position: static;
+
+  .nav__item {
+
+      .nav--secondary & {
+        border: none;
+        margin-left: $spacing;
+        a {
+          padding: 0;
+          color: $color-strong;
+        }
+      }
   }
 }
