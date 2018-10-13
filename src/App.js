@@ -19,7 +19,7 @@ class App extends Component {
                   <ul className="nav nav--main">
                     <li className="nav__item nav__item--top">
                       <a href="#">menu link</a>
-                      <ul className="nav">
+                      <ul className="nav nav--sub">
                         <li className="nav__item"><a href="#">Integer eget mauris</a></li>
                         <li className="nav__item"><a href="#">Pulvinar consectetur</a></li>
                         <li className="nav__item"><a href="#">Oget mauris praesent</a></li>
@@ -29,7 +29,7 @@ class App extends Component {
                     </li>
                     <li className="nav__item nav__item--top">
                       <a href="#">menu link</a>
-                      <ul className="nav">
+                      <ul className="nav nav--sub">
                         <li className="nav__item"><a href="#">Integer eget mauris</a></li>
                         <li className="nav__item"><a href="#">Pulvinar consectetur</a></li>
                         <li className="nav__item"><a href="#">Oget mauris praesent</a></li>
@@ -40,7 +40,7 @@ class App extends Component {
                     <li className="nav__item nav__item--top"><a href="#">menu link</a></li>
                     <li className="nav__item nav__item--top">
                       <a href="#">menu link</a>
-                      <ul className="nav">
+                      <ul className="nav nav--sub">
                         <li className="nav__item"><a href="#">Integer eget mauris</a></li>
                         <li className="nav__item"><a href="#">Pulvinar consectetur</a></li>
                         <li className="nav__item"><a href="#">Oget mauris praesent</a></li>

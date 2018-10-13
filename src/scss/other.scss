@@ -71,6 +71,10 @@
   background: $color-brand;
   padding: $spacing-large 0;
   margin-bottom: $spacing-large;
+
+  @media (min-width: $desktop) {
+    padding-bottom: $spacing;
+  }
 }
 
 /* BOXES  ------------------------------------------------------------------- */
@@ -129,6 +133,12 @@ label {
   text-decoration: none;
   font-weight: bold;
   font-size: 3rem;
+
+  @media (min-width: $desktop) {
+    font-size: 4.2rem;
+    line-height: 3.6rem;
+    align-self: flex-end;
+  }
 }
 
 .logo--secondary {

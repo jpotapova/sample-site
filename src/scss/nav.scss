@@ -60,10 +60,26 @@
     height: auto;
     width: auto;
     overflow: visible;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 5rem;
   }
 
   .nav--secondary {
     display: flex;
+    justify-content: flex-end;
+  }
+
+  // FIXME
+  .nav--sub {
+    display: none;
+  }
+
+  .nav--main {
+    display: flex;
+    justify-content: flex-end;
   }
 }
 
@@ -166,5 +182,26 @@
           color: $color-strong;
         }
       }
+
+      .nav--main & {
+        border: none;
+        margin-left: $spacing;
+
+        a {
+          padding: 0;
+          color: $color-invert;
+        }
+
+        &--top > a {
+          background: none;
+          font-size: 1.4rem;
+
+          &:hover {
+            color: #333333;
+          }
+        }
+      }
+
+
   }
 }
