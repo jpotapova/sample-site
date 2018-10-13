@@ -7,7 +7,7 @@ class App extends Component {
         <div className="content">
           <header className="header">
             <div className="container container--flex">
-              <a href="#" className="logo">The Site</a>
+              <a href="#" className="logo logo--primary">The Site</a>
               <button type="button" className="button button--nav">&#9776;</button>
               <div className="navbox">
                 <ul className="nav nav--secondary">
