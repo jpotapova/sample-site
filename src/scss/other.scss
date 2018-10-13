@@ -8,6 +8,10 @@
 
 .box--dark {
   background: $color-separate;
+
+  @media (min-width: $mobile-wide) {
+    columns: 2;
+  }
 }
 
 /* FORMS -------------------------------------------------------------------- */
@@ -95,7 +99,7 @@ label {
   line-height: $close-button;
   position: absolute;
   top: $spacing-small;
-  left: calc((100% - #{$mobile-nav} - #{$close-button})/2);
+  left: $spacing-small;
 }
 
 /* OTHER -------------------------------------------------------------------- */
@@ -103,4 +107,25 @@ label {
 .article-header {
   border-bottom:  2px solid $color-strong;
   margin-bottom: $spacing;
+}
+
+@media (min-width: $mobile-wide) {
+
+  .related-content {
+    display: flex;
+
+    & .box {
+      margin-left: $spacing-small;
+      margin-right: $spacing-small;
+      flex: 1;
+
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
 }
