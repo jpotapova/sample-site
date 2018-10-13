@@ -63,3 +63,17 @@ import './scss/index.scss';
   window.addEventListener('scroll', toggleButton);
 
 }());
+
+/* FORM VALIDATION ---------------------------------------------------------- */
+
+(function () {
+
+  function isInvalid() {
+    return true; // FIXME
+  }
+
+  document.getElementById("form").addEventListener("submit", function(e){
+    if (isInvalid()) e.preventDefault();
+  });
+
+}());
