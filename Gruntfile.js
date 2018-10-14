@@ -1,10 +1,12 @@
-// FIXME path etc
+const port = 3000;
+const srcScss = "src/scss/*.scss";
+
 module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON("package.json"),
     prettier: {
       scss: {
-        src: ["src/scss/*.scss"]
+        src: [srcScss]
       }
     },
     sass: {
@@ -48,7 +50,7 @@ module.exports = function(grunt) {
       server: {
         options: {
           livereload: true,
-          port: 3000, // FIXME
+          port: port,
           base: "public"
         }
       }
@@ -58,11 +60,11 @@ module.exports = function(grunt) {
         livereload: true
       },
       scss: {
-        files: "**/*.scss",
+        files: srcScss,
         tasks: ["prettier:scss", "sass:dev", "sasslint"]
       },
       html: {
-        files: "**/*.html"
+        files: "**/*.html" // FIXME
       },
       js: {
         files: "src/*.js",
@@ -71,23 +73,16 @@ module.exports = function(grunt) {
     },
     open: {
       dev: {
-        path: "http://127.0.0.1:3000",
+        path: "http://127.0.0.1:" + port,
         app: "Google Chrome"
       }
     },
     sasslint: {
-      target: ["src/scss/*.scss"]
+      target: [srcScss]
     }
   });
 
-  // FIXME
-  grunt.loadNpmTasks("grunt-contrib-sass");
-  grunt.loadNpmTasks("grunt-contrib-watch");
-  grunt.loadNpmTasks("grunt-contrib-connect");
-  grunt.loadNpmTasks("grunt-contrib-uglify-es");
-  grunt.loadNpmTasks("grunt-open");
-  grunt.loadNpmTasks("grunt-sass-lint");
-  grunt.loadNpmTasks("grunt-prettier");
+  require("load-grunt-tasks")(grunt);
 
   grunt.registerTask("default", [
     "prettier",
