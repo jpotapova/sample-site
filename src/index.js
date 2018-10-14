@@ -14,8 +14,7 @@
   window.addEventListener("scroll", toggleButton);
 
 }());
-;
-(function () {
+;(function () {
 
   // retrieve label text without '*:'
   function getFieldLabel(fieldID) {
@@ -45,7 +44,7 @@
 
   }
 
-  // validate each field
+  // call validation for each of the fields
   function validateForm() {
 
     let results = {
@@ -104,7 +103,7 @@
   const app = document.getElementById("app"),
         navOpen = document.getElementById("nav-open"),
         navClose = document.getElementById("nav-close"),
-        mq = window.matchMedia("(min-width: 60rem)"); // FIXME - get variable from scss
+        mq = window.matchMedia("(min-width: 60rem)");
 
   function showNav() {
     app.className = "app viewnav";

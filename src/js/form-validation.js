@@ -1,4 +1,3 @@
-
 (function () {
 
   // retrieve label text without '*:'
@@ -29,7 +28,7 @@
 
   }
 
-  // validate each field
+  // call validation for each of the fields
   function validateForm() {
 
     let results = {

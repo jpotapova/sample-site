@@ -186,13 +186,11 @@ label {
   position: fixed;
   width: 100%;
 
-  // FIXME
   @media (min-width: $desktop) {
     display: none;
   }
 }
 
-// FIXME
 .button--nav {
   color: $color-invert;
   float: right;
