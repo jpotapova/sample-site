@@ -6,11 +6,6 @@
 
 .container {
   margin: 0 $spacing;
-
-  &--flex {
-    display: flex;
-    justify-content: space-between;
-  }
 }
 
 @media (min-width: $desktop) {
@@ -20,6 +15,11 @@
     max-width: 1038px; // 1010 + 2 * padding
     padding-left: $spacing;
     padding-right: $spacing;
+
+    &--flex {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
   .container--main {
@@ -195,7 +195,9 @@ label {
 // FIXME
 .button--nav {
   color: $color-invert;
+  float: right;
   font-size: 2rem;
+  line-height: 4rem;
 
   @media (min-width: $desktop) {
     display: none;
