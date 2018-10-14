@@ -63,6 +63,12 @@ module.exports = function(grunt) {
         files: 'src/*.js',
         tasks: ['uglify']
       }
+    },
+    open: {
+      dev: {
+        path: 'http://127.0.0.1:3000',
+        app: 'Google Chrome'
+      }
     }
   });
 
@@ -70,7 +76,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-uglify-es');
+  grunt.loadNpmTasks('grunt-open');
 
-  grunt.registerTask('default', ['sass:dev', 'uglify:dev', 'connect', 'watch']);
+  grunt.registerTask('default', ['sass:dev', 'uglify:dev', 'connect', 'open', 'watch']);
 
 };
