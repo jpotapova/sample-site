@@ -1,9 +1,10 @@
 html {
   box-sizing: border-box;
 }
+
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -18,16 +19,15 @@ h2 {
 body,
 html {
   background: $color-bg;
-  font-family: $font;
   color: $color-base;
+  font-family: $font;
   font-size: $base-size;
-  // background: red;
 }
 
 h1,
 h2 {
-  font-family: TimesNewRoman, "Times New Roman", Times, serif;
   color: $color-strong;
+  font-family: TimesNewRoman, "Times New Roman", Times, serif;
   padding-bottom: $spacing-small;
 }
 
@@ -48,8 +48,8 @@ h2 {
 }
 
 p {
-  margin: 0 0 $spacing 0;
   line-height: 1.3rem;
+  margin: 0 0 $spacing;
 
   &:last-child {
     margin: 0;

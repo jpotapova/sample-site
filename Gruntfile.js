@@ -3,7 +3,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON("package.json"),
     prettier: {
-      files: {
+      scss: {
         src: ["src/scss/*.scss"]
       }
     },
@@ -59,14 +59,14 @@ module.exports = function(grunt) {
       },
       scss: {
         files: "**/*.scss",
-        tasks: ["sass"]
+        tasks: ["prettier:scss", "sass:dev", "sasslint"]
       },
       html: {
         files: "**/*.html"
       },
       js: {
         files: "src/*.js",
-        tasks: ["uglify"]
+        tasks: ["uglify:dev"]
       }
     },
     open: {
