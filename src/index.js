@@ -50,7 +50,7 @@
   const toTop = document.getElementById("to-top");
 
   function toggleButton() {
-    if (document.documentElement.scrollTop > 100) {
+    if (window.pageYOffset || document.documentElement.scrollTop > 100) {
       toTop.className = "button button--totop";
     } else {
       toTop.className = "button button--totop hide";
