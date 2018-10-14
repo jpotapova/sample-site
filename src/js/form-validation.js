@@ -60,6 +60,8 @@
     var t = document.querySelectorAll(".form__row");
     t.forEach((row) => {
       row.className = "form__row";
+      let errorMsg = row.querySelector("div");
+      if (errorMsg) row.removeChild(errorMsg);
     });
   }
 
