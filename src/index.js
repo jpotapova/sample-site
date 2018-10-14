@@ -107,10 +107,15 @@
   }
 
   function showError(fieldID, error) {
-    console.log(fieldID, error);
+    let row = document.getElementById(fieldID+"-row"),
+        errorMsg = document.createElement("div");
+    errorMsg.innerText = error;
+    row.className = "form__row error";
+    row.insertBefore(errorMsg, document.getElementById(fieldID));
   }
 
   document.getElementById("form").addEventListener("submit", function(e){
+    // fixme - cleanup errors
     const results = validateForm();
     if (!results.isValid) {
       e.preventDefault();

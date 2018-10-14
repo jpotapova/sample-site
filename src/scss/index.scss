@@ -278,3 +278,18 @@ label {
 .hide {
   display: none;
 }
+
+.error {
+  div {
+    color: $color-brand;
+    font-style: italic;
+    font-size: 0.8em;
+  }
+  label {
+    color: $color-brand;
+  }
+  input,
+  textarea {
+    border-color: $color-brand;
+  }
+}
