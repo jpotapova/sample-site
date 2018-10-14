@@ -2,8 +2,6 @@
   list-style: none;
 }
 
-/* MAIN NAV LAYOUT ---------------------------------------------------------- */
-
 .content {
   transform: translate3d(0);
   transition: 0.3s ease all;
@@ -20,7 +18,6 @@
   z-index: 1;
 }
 
-// FIXME
 .overlay {
   background: rgba(0, 0, 0, 0);
   height: 100%;
@@ -36,7 +33,6 @@
 }
 
 .viewnav {
-  // FIXME ON DESKTOP
   &.app {
     height: 100vh;
     overflow: hidden;
@@ -53,76 +49,6 @@
     z-index: 2;
   }
 }
-
-@media (min-width: $desktop) {
-  .navbox {
-    background: transparent;
-    display: flex;
-    flex-direction: column;
-    height: 7rem;
-    justify-content: space-between;
-    overflow: visible;
-    position: static;
-    width: auto;
-  }
-
-  .nav--secondary {
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  .nav--main {
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  .nav__item--top {
-    padding-bottom: $spacing;
-    position: relative;
-
-    &:hover .nav--sub {
-      display: block;
-      opacity: 1;
-      visibility: visible;
-    }
-
-    &.nav__item > a {
-      background: none;
-      font-size: 1.4rem;
-    }
-
-    &:hover > a {
-      color: #333;
-    }
-  }
-
-  // FIXME
-  .nav--sub {
-    display: none;
-    left: -50%;
-    opacity: 0;
-    position: absolute;
-    top: $spacing * 2;
-    transition: all 0.5s ease;
-    visibility: hidden;
-
-    &::after {
-      border: solid transparent;
-      border-bottom-color: $color-base;
-      border-width: $arrow-size;
-      bottom: 100%;
-      content: " ";
-      height: 0;
-      left: 50%;
-      margin-left: -$arrow-size;
-      pointer-events: none;
-      position: absolute;
-      width: 0;
-    }
-  }
-}
-
-/* NAV ITEMS COLORS/SIZES/ETC ----------------------------------------------- */
 
 .nav__item {
   border-bottom: 1px solid $color-separate;
@@ -245,6 +171,71 @@
         background: $color-highlight;
         color: $color-invert;
       }
+    }
+  }
+
+  .navbox {
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    height: 7rem;
+    justify-content: space-between;
+    overflow: visible;
+    position: static;
+    width: auto;
+  }
+
+  .nav--secondary {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .nav--main {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .nav__item--top {
+    padding-bottom: $spacing;
+    position: relative;
+
+    &:hover .nav--sub {
+      display: block;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &.nav__item > a {
+      background: none;
+      font-size: 1.4rem;
+    }
+
+    &:hover > a {
+      color: #333;
+    }
+  }
+
+  .nav--sub {
+    display: none;
+    left: -50%;
+    opacity: 0;
+    position: absolute;
+    top: $spacing * 2;
+    transition: all 0.5s ease;
+    visibility: hidden;
+
+    &::after {
+      border: solid transparent;
+      border-bottom-color: $color-base;
+      border-width: $arrow-size;
+      bottom: 100%;
+      content: " ";
+      height: 0;
+      left: 50%;
+      margin-left: -$arrow-size;
+      pointer-events: none;
+      position: absolute;
+      width: 0;
     }
   }
 }
