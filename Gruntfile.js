@@ -63,7 +63,7 @@ module.exports = function(grunt) {
         tasks: ["prettier:scss", "sass:dev", "sasslint"]
       },
       html: {
-        files: "**/*.html" // FIXME
+        files: "**/*.html"
       },
       js: {
         files: "src/*.js",
@@ -77,6 +77,10 @@ module.exports = function(grunt) {
       }
     },
     sasslint: {
+      options: {
+  			configFile: '.sass-lint.yml',
+        formatter: 'compact'
+  		},
       target: [srcScss]
     }
   });
