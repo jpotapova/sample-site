@@ -73,7 +73,10 @@
 
   // remove all errors from html
   function cleanupErrors() {
-    // document.querySelector(".form__row");
+    var t = document.querySelectorAll(".form__row");
+    t.forEach((row) => {
+      row.className = "form__row";
+    });
   }
 
   // start form validation each time submit is clicked
@@ -84,7 +87,8 @@
       e.preventDefault();
       for (let field in results.fields) {
         if (results.fields.hasOwnProperty(field)) {
-          showError(field, results.fields[field].error);
+          if (!results.fields[field].isValid)
+            showError(field, results.fields[field].error);
         }
       }
     }

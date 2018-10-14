@@ -66,7 +66,7 @@ module.exports = function(grunt) {
         files: "**/*.html"
       },
       js: {
-        files: "src/*.js",
+        files: "src/js/*.js",
         tasks: ["concat", "jshint", "uglify:dev"]
       }
     },
