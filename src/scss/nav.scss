@@ -85,6 +85,15 @@
       opacity: 1;
       visibility: visible;
     }
+
+    &.nav__item > a {
+      background: none;
+      font-size: 1.4rem;
+    }
+
+    &:hover > a {
+      color: #333;
+    }
   }
 
   // FIXME
@@ -236,17 +245,6 @@
         background: $color-highlight;
         color: $color-invert;
       }
-    }
-  }
-
-  .nav__item--top {
-    &.nav__item > a {
-      background: none;
-      font-size: 1.4rem;
-    }
-
-    &:hover > a {
-      color: #333;
     }
   }
 }
