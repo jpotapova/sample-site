@@ -67,7 +67,7 @@ module.exports = function(grunt) {
       },
       js: {
         files: "src/*.js",
-        tasks: ["jshint", "uglify:dev"]
+        tasks: ["concat", "jshint", "uglify:dev"]
       }
     },
     open: {
@@ -87,7 +87,16 @@ module.exports = function(grunt) {
       options: {
         jshintrc: true
       },
-      all: ["Gruntfile.js", "src/index.js"]
+      all: ["Gruntfile.js", "src/js/*.js"]
+    },
+    concat: {
+      options: {
+        separator: ';',
+      },
+      dist: {
+        src: ['src/js/*.js'],
+        dest: 'src/index.js',
+      },
     }
   });
 
@@ -97,6 +106,7 @@ module.exports = function(grunt) {
     "prettier",
     "sass:dev",
     "sasslint",
+    "concat",
     "jshint",
     "uglify:dev",
     "connect",
