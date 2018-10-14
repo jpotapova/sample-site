@@ -113,5 +113,5 @@ module.exports = function(grunt) {
     "open",
     "watch"
   ]);
-  grunt.registerTask("prod", ["sass:prod", "uglify:prod"]);
+  grunt.registerTask("prod", ["sass:prod", "concat", "uglify:prod"]);
 };
