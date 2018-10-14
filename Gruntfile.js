@@ -3,10 +3,40 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     sass: {
-      app: {
+      dev: {
         files: {
            'public/index.css':'src/scss/index.scss'
          }
+      },
+      prod: {
+        options: {
+          style: 'compressed'
+        },
+        files: {
+           'public/index.css':'src/scss/index.scss'
+         }
+      }
+    },
+    uglify: {
+      dev: {
+        options: {
+          mangle: false,
+          compress: false,
+          beautify: true
+        },
+        files: {
+          'public/index.js': ['src/index.js']
+        }
+      },
+      prod: {
+        options: {
+          mangle: true,
+          compress: true,
+          beautify: false
+        },
+        files: {
+          'public/index.js': ['src/index.js']
+        }
       }
     },
     connect: {
@@ -30,7 +60,8 @@ module.exports = function(grunt) {
         files: '**/*.html'
       },
       js: {
-        files: 'src/*.js'
+        files: 'src/*.js',
+        tasks: ['uglify']
       }
     }
   });
@@ -38,7 +69,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-contrib-uglify-es');
 
-  grunt.registerTask('default', ['sass', 'connect', 'watch']);
+  grunt.registerTask('default', ['sass:dev', 'uglify:dev', 'connect', 'watch']);
 
 };
