@@ -35,7 +35,7 @@
     // initial load
     processMQ();
     // screen size changed after load
-    mq.addListener(function(e){
+    mq.addListener(function(){
         processMQ();
     });
   }
@@ -58,7 +58,7 @@
   }
 
   toggleButton();
-  window.addEventListener('scroll', toggleButton);
+  window.addEventListener("scroll", toggleButton);
 
 }());
 
@@ -66,12 +66,61 @@
 
 (function () {
 
-  function isInvalid() {
-    return true; // FIXME
+  function getFieldLabel(fieldID) {
+    return document.querySelector(`[for="${fieldID}"]`).innerText.replace("*:", "");
+  }
+
+  function validateField(fieldID) {
+
+    let error = "",
+        isValid = true,
+        field = document.getElementById(fieldID);
+
+    if (field.value === "") {
+      isValid = false;
+      error = `Please fill in the ${getFieldLabel(fieldID)} field`;
+    } else if (field.value.length < 3) {
+      isValid = false;
+      error = `${getFieldLabel(fieldID)} field should be at least 3 characters long`;
+    }
+
+    return {
+      isValid,
+      error
+    };
+
+  }
+
+  function validateForm() {
+
+    let results = {
+      "fields": {
+        "name": validateField("name"),
+        "lastname": validateField("lastname"),
+        "message": validateField("message")
+      }
+    };
+    let fields = results.fields;
+    results.isValid = fields.name.isValid && fields.lastname.isValid && fields.message.isValid;
+    return results;
+
+  }
+
+  function showError(fieldID, error) {
+    console.log(fieldID, error);
   }
 
   document.getElementById("form").addEventListener("submit", function(e){
-    if (isInvalid()) e.preventDefault();
+    const results = validateForm();
+    if (!results.isValid) {
+      e.preventDefault();
+      for (let field in results.fields) {
+        if (results.fields.hasOwnProperty(field)) {
+          showError(field, results.fields[field].error);
+        }
+      }
+    }
+
   });
 
 }());
