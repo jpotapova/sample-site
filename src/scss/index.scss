@@ -221,6 +221,10 @@ label {
   margin-bottom: $spacing;
 }
 
+.sidebar__left {
+  margin-bottom: $spacing;
+}
+
 @media (min-width: $mobile-wide) {
   .related-content {
     display: flex;
@@ -238,6 +242,34 @@ label {
         margin-right: 0;
       }
     }
+  }
+
+  .sidebar__content {
+    display: flex;
+  }
+
+  .sidebar__left {
+    flex: 1;
+    margin-right: $spacing-small;
+  }
+
+  .sidebar__right {
+    flex: 1;
+    margin-left: $spacing-small;
+  }
+}
+
+@media (min-width: $desktop) {
+  .sidebar__content {
+    display: block;
+  }
+
+  .sidebar__left {
+    margin-right: 0;
+  }
+
+  .sidebar__right {
+    margin-left: 0;
   }
 }
 
