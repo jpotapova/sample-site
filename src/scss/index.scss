@@ -1,6 +1,6 @@
-@import 'config';
-@import 'general';
-@import 'nav';
+@import "config";
+@import "general";
+@import "nav";
 
 /* CONTAINER ---------------------------------------------------------------- */
 
@@ -14,7 +14,6 @@
 }
 
 @media (min-width: $desktop) {
-
   .container {
     max-width: 1038px; // 1010 + 2 * padding
     margin-left: auto;
@@ -33,19 +32,18 @@
   }
 }
 
-
 /* FOOTER ------------------------------------------------------------------- */
 
 .footer {
   background: $color-highlight;
   color: #b3b3b3;
   text-align: justify;
-  padding: $spacing-large 0 $spacing-large+$spacing 0;
+  padding: $spacing-large 0 $spacing-large + $spacing 0;
 }
 
 @media (min-width: $tablet) {
   .footer {
-      padding-top: $spacing;
+    padding-top: $spacing;
   }
 
   .footer__info {
@@ -219,12 +217,11 @@ label {
 /* OTHER -------------------------------------------------------------------- */
 
 .article-header {
-  border-bottom:  2px solid $color-strong;
+  border-bottom: 2px solid $color-strong;
   margin-bottom: $spacing;
 }
 
 @media (min-width: $mobile-wide) {
-
   .related-content {
     display: flex;
 
@@ -241,7 +238,6 @@ label {
       }
     }
   }
-
 }
 
 .hide {

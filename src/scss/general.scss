@@ -1,17 +1,22 @@
-
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
-body, ul, h1, h2 {
+body,
+ul,
+h1,
+h2 {
   margin: 0;
   padding: 0;
 }
 
-body, html {
+body,
+html {
   background: $color-bg;
   font-family: $font;
   color: $color-base;
@@ -19,7 +24,8 @@ body, html {
   // background: red;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-family: TimesNewRoman, "Times New Roman", Times, serif;
   color: $color-strong;
   padding-bottom: $spacing-small;
@@ -50,7 +56,14 @@ p {
   }
 }
 
-p, a, ul, li, button, input, textarea, label {
+p,
+a,
+ul,
+li,
+button,
+input,
+textarea,
+label {
   font-size: $base-size;
 }
 

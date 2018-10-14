@@ -6,7 +6,7 @@
 
 .content {
   transform: translate3d(0);
-  transition: .3s ease all;
+  transition: 0.3s ease all;
 }
 
 .navbox {
@@ -25,7 +25,7 @@
   width: 100%;
   height: 100%;
   z-index: -1;
-  background:rgba(0, 0, 0, 0);
+  background: rgba(0, 0, 0, 0);
   position: absolute;
   top: 0;
   left: 0;
@@ -36,7 +36,6 @@
 }
 
 .viewnav {
-
   // FIXME ON DESKTOP
   &.app {
     width: 100%;
@@ -51,7 +50,7 @@
 
   .overlay {
     z-index: 2;
-    background:rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5);
   }
 }
 
@@ -92,26 +91,26 @@
 
   // FIXME
   .nav--sub {
-  	visibility: hidden;
+    visibility: hidden;
     opacity: 0;
-  	position: absolute;
+    position: absolute;
     transition: all 0.5s ease;
     left: -50%;
-    top: $spacing*2;
+    top: $spacing * 2;
     display: none;
 
     &::after {
       bottom: 100%;
-    	left: 50%;
-    	border: solid transparent;
+      left: 50%;
+      border: solid transparent;
       border-bottom-color: $color-base;
-    	content: " ";
-    	height: 0;
-    	width: 0;
-    	position: absolute;
-    	pointer-events: none;
-    	border-width: $arrow-size;
-    	margin-left: -$arrow-size;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-width: $arrow-size;
+      margin-left: -$arrow-size;
     }
   }
 }
@@ -119,13 +118,12 @@
 /* NAV ITEMS COLORS/SIZES/ETC ----------------------------------------------- */
 
 .nav__item {
-
   a {
     text-decoration: none;
     display: block;
   }
 
-  border-bottom:  1px solid $color-separate;
+  border-bottom: 1px solid $color-separate;
   &:last-child {
     border-bottom: none;
   }
@@ -139,7 +137,7 @@
     color: $color-base;
   }
 
-  .nav--main &  {
+  .nav--main & {
     border-color: $color-border;
 
     a {
@@ -149,7 +147,7 @@
     }
   }
 
-  .nav--main &--top>a {
+  .nav--main &--top > a {
     background: $color-highlight;
     color: white;
   }
@@ -161,7 +159,6 @@
   .nav--sub & {
     margin-left: 0;
   }
-
 }
 
 .nav--footerlinks {
@@ -176,7 +173,6 @@
     a {
       color: $color-invert;
     }
-
   }
 }
 
@@ -208,57 +204,49 @@
 }
 
 @media (min-width: $desktop) {
-
   .nav__item {
+    .nav--secondary & {
+      border: none;
+      margin-left: $spacing;
+      a {
+        padding: 0;
+        color: $color-strong;
+      }
+    }
 
-      .nav--secondary & {
-        border: none;
-        margin-left: $spacing;
-        a {
-          padding: 0;
-          color: $color-strong;
-        }
+    .nav--main & {
+      border: none;
+      margin-left: $spacing;
+
+      a {
+        padding: 0;
+        color: $color-invert;
+      }
+    }
+
+    .nav--sub & {
+      a {
+        background: $color-base;
+        color: $color-invert;
+        white-space: nowrap;
+        padding: $spacing-small;
       }
 
-      .nav--main & {
-
-        border: none;
-        margin-left: $spacing;
-
-        a {
-          padding: 0;
-          color: $color-invert;
-        }
-
+      &:hover a {
+        background: $color-highlight;
+        color: $color-invert;
       }
-
-      .nav--sub & {
-
-        a {
-          background: $color-base;
-          color: $color-invert;
-          white-space: nowrap;
-          padding: $spacing-small;
-        }
-
-        &:hover a {
-          background: $color-highlight;
-          color: $color-invert;
-        }
-      }
-
+    }
   }
 
   .nav__item--top {
-
     &.nav__item > a {
       background: none;
       font-size: 1.4rem;
     }
 
-    &:hover > a{
+    &:hover > a {
       color: #333333;
     }
   }
-
 }
