@@ -1,20 +1,25 @@
+// FIXME path etc
 module.exports = function(grunt) {
-
   grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json'),
+    pkg: grunt.file.readJSON("package.json"),
+    prettier: {
+      files: {
+        src: ["src/scss/*.scss"]
+      }
+    },
     sass: {
       dev: {
         files: {
-           'public/index.css':'src/scss/index.scss'
-         }
+          "public/index.css": "src/scss/index.scss"
+        }
       },
       prod: {
         options: {
-          style: 'compressed'
+          style: "compressed"
         },
         files: {
-           'public/index.css':'src/scss/index.scss'
-         }
+          "public/index.css": "src/scss/index.scss"
+        }
       }
     },
     uglify: {
@@ -25,7 +30,7 @@ module.exports = function(grunt) {
           beautify: true
         },
         files: {
-          'public/index.js': ['src/index.js']
+          "public/index.js": ["src/index.js"]
         }
       },
       prod: {
@@ -35,7 +40,7 @@ module.exports = function(grunt) {
           beautify: false
         },
         files: {
-          'public/index.js': ['src/index.js']
+          "public/index.js": ["src/index.js"]
         }
       }
     },
@@ -43,8 +48,8 @@ module.exports = function(grunt) {
       server: {
         options: {
           livereload: true,
-          port: 3000,
-          base: 'public'
+          port: 3000, // FIXME
+          base: "public"
         }
       }
     },
@@ -53,31 +58,45 @@ module.exports = function(grunt) {
         livereload: true
       },
       scss: {
-        files: '**/*.scss',
-        tasks: ['sass']
+        files: "**/*.scss",
+        tasks: ["sass"]
       },
       html: {
-        files: '**/*.html'
+        files: "**/*.html"
       },
       js: {
-        files: 'src/*.js',
-        tasks: ['uglify']
+        files: "src/*.js",
+        tasks: ["uglify"]
       }
     },
     open: {
       dev: {
-        path: 'http://127.0.0.1:3000',
-        app: 'Google Chrome'
+        path: "http://127.0.0.1:3000",
+        app: "Google Chrome"
       }
+    },
+    sasslint: {
+      target: ["src/scss/*.scss"]
     }
   });
 
-  grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-connect');
-  grunt.loadNpmTasks('grunt-contrib-uglify-es');
-  grunt.loadNpmTasks('grunt-open');
+  // FIXME
+  grunt.loadNpmTasks("grunt-contrib-sass");
+  grunt.loadNpmTasks("grunt-contrib-watch");
+  grunt.loadNpmTasks("grunt-contrib-connect");
+  grunt.loadNpmTasks("grunt-contrib-uglify-es");
+  grunt.loadNpmTasks("grunt-open");
+  grunt.loadNpmTasks("grunt-sass-lint");
+  grunt.loadNpmTasks("grunt-prettier");
 
-  grunt.registerTask('default', ['sass:dev', 'uglify:dev', 'connect', 'open', 'watch']);
-
+  grunt.registerTask("default", [
+    "prettier",
+    "sass:dev",
+    "sasslint",
+    "uglify:dev",
+    "connect",
+    "open",
+    "watch"
+  ]);
+  grunt.registerTask("prod", ["sass:prod", "uglify:prod"]);
 };

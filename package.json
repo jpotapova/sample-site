@@ -6,7 +6,9 @@
     "grunt-contrib-uglify": "^4.0.0",
     "grunt-contrib-uglify-es": "^3.3.0",
     "grunt-contrib-watch": "^1.1.0",
-    "grunt-open": "^0.2.3"
+    "grunt-open": "^0.2.3",
+    "grunt-prettier": "^1.1.0",
+    "grunt-sass-lint": "^0.2.4"
   },
   "dependencies": {
     "uglify-es": "^3.3.9"
