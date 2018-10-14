@@ -1,3 +1,6 @@
 node_modules
 public/index.js
 .DS_Store
+public/index.css
+public/index.css.map
+.sass-cache
