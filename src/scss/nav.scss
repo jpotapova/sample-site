@@ -8,10 +8,11 @@
 }
 
 .navbox {
+  -webkit-overflow-scrolling: touch;
   background: $color-bg;
   height: 100%;
   left: -$mobile-nav;
-  overflow: scroll;
+  overflow-y: scroll;
   position: absolute;
   top: 0;
   width: $mobile-nav;
@@ -92,6 +93,10 @@
 
   .nav--sub & {
     margin-left: 0;
+
+    & a {
+      padding-left: $spacing * 2.5;
+    }
   }
 }
 

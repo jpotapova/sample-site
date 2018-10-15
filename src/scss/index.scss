@@ -280,12 +280,14 @@ label {
 .error {
   div {
     color: $color-brand;
-    font-style: italic;
     font-size: 0.8em;
+    font-style: italic;
   }
+
   label {
     color: $color-brand;
   }
+
   input,
   textarea {
     border-color: $color-brand;
