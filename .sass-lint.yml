@@ -11,3 +11,4 @@ rules:
     - 0
   no-transition-all: 0
   force-element-nesting: 0
+  no-vendor-prefixes: 0
