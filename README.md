@@ -6,7 +6,7 @@ Repository has 3 branches:
 
 * dev - development environment branch, any changes should be performed on this branch first
 
-* preprod - staging environment branch, where all final assets are generated and testing is pre-production testing performed
+* preprod - staging environment branch, where all final assets are generated and pre-production testing is performed
 
 * gh-public - live environment branch
 
@@ -15,7 +15,7 @@ Repository has 3 branches:
 #### Worflow automation
 
 Grunt was chosen for workflow automation, as it is a very simple static website.
-To speed up development process grunt was configured to open the browser, serve static website and perform live reload on src file changes.
+To speed up development process grunt was configured to open the browser, serve static website and perform live reload on source file changes.
 Grunt was also used to do all the file pre-processing, such as compiling scss code, bundling javascript etc.
 For production mode grunt is used to perfom bundling and minification.
 
