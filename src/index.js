@@ -31,10 +31,10 @@
 
     if (field.value === "") {
       isValid = false;
-      error = "Please fill in the " +getFieldLabel(fieldID) +" field";
+      error = "Please fill in the " +getFieldLabel(fieldID);
     } else if (field.value.length < 3) {
       isValid = false;
-      error = getFieldLabel(fieldID) + " field should be at least 3 characters long";
+      error = getFieldLabel(fieldID) + " should be at least 3 characters long";
     }
 
     return {
