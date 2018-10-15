@@ -2,7 +2,7 @@
 
   // retrieve label text without '*:'
   function getFieldLabel(fieldID) {
-    return document.querySelector(`[for="${fieldID}"]`).innerText.replace("*:", "");
+    return document.querySelector('[for="'+fieldID+'"]').innerText.replace("*:", "");
   }
 
   // check if field is valid and detect which rule does it break
@@ -15,10 +15,10 @@
 
     if (field.value === "") {
       isValid = false;
-      error = `Please fill in the ${getFieldLabel(fieldID)} field`;
+      error = "Please fill in the " +getFieldLabel(fieldID) +" field";
     } else if (field.value.length < 3) {
       isValid = false;
-      error = `${getFieldLabel(fieldID)} field should be at least 3 characters long`;
+      error = getFieldLabel(fieldID) + " field should be at least 3 characters long";
     }
 
     return {
@@ -56,12 +56,15 @@
 
   // remove all errors from html
   function cleanupErrors() {
-    var t = document.querySelectorAll(".form__row");
-    t.forEach((row) => {
-      row.className = "form__row";
-      let errorMsg = row.querySelector("div");
-      if (errorMsg) row.removeChild(errorMsg);
-    });
+    let t = document.querySelectorAll(".form__row"),
+        i = 0,
+        l = t.length;
+
+    for (i; i < l; i++) {
+      t[i].className = "form__row";
+      let errorMsg = t[i].querySelector("div");
+      if (errorMsg) t[i].removeChild(errorMsg);
+    }
   }
 
   // start form validation each time submit is clicked
