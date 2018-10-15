@@ -2,6 +2,14 @@ To view fully working sample site, please visit: https://jpotapova.github.io/sam
 
 Supported browsers are: Google Chrome, Firefox, IE11, Opera
 
+### Intended behaviour
+
+Third item in the main navigation does not have children items to demonstrate an edge case
+
+Form validation and re-validation is performed only on submit button click
+
+### Branches
+
 Repository has 3 branches:
 
 * dev - development environment branch, any changes should be performed on this branch first
